@@ -1,4 +1,4 @@
-#Kamlesh's Project (Airbnb Clone)
+#Wanderlust (Airbnb Clone)
 
 This is a full-stack web application inspired by Airbnb, developed using **Node.js**, **Express.js**, **MongoDB**, and **EJS templating**. It allows users to list, search, and review vacation rentals.
 
