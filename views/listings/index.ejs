@@ -1,46 +1,69 @@
 <% layout("/layouts/boilerplate")%>  
  
+<style>
+  #filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
 
-  <style>
-    #filters {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .filter {
-      text-align: center;
-      margin-right: 2rem;
-      margin-top: 2rem;
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-    }
-    .filter:hover {
-      opacity: 1;
-      transform: scale(1.05);
-      cursor: pointer;
-    }
+/* Filter item */
+.filter {
+  text-align: center;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  flex: 0 0 auto; /* Prevent shrinking */
+}
 
-    .filter p{
-      font-size: 1rem;
-      
-    }
-    .tax-info {
-      display: none;
-    }
+.filter:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
-    .tax-toggle{
-      border: 1px solid #ccc;
-      border-radius: 1rem;
-      height: 3.25rem;
-      padding: 1rem;
-      margin-left: 3rem;
-      display: flex;
-      align-items: center;
-    }
-    
-  </style>
-    
+.filter p {
+  font-size: 1rem;
+}
 
+/* Optional: make icons a bit more balanced */
+.filter i {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Tax Info and Toggle - unchanged */
+.tax-info {
+  display: none;
+}
+
+.tax-toggle {
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  height: 3.25rem;
+  padding: 1rem;
+  margin-left: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 768px) {
+  #filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .filter {
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
+}
+</style>
 
 
 
